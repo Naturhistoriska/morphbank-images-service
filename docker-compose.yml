@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+
+  db:
+    image: mysql:5.7.22
+    container_name: mysql
+    restart: always
+    env_file: ./env/.mysql
+    ports:
+      - 13306:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - default
+
+
+# running with external proxy (check the network 'docker network ls')
+networks:
+  default:
+    external:
+      name: proxy_default
+
+
+
+volumes:
+  mysql_data:

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" 
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="jpaMorphPU" transaction-type="JTA">
+    <jta-data-source>java:jboss/datasources/MorphDS</jta-data-source>
+    <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+    <class>se.nrm.morphbank.datamodel.MatrixCellValue</class>
+    <class>se.nrm.morphbank.datamodel.TaxaTemp</class>
+    <class>se.nrm.morphbank.datamodel.News</class>
+    <class>se.nrm.morphbank.datamodel.Geolocated</class>
+    <class>se.nrm.morphbank.datamodel.CurrentIds</class>
+    <class>se.nrm.morphbank.datamodel.ExternalLinkObject</class>
+    <class>se.nrm.morphbank.datamodel.Publication</class>
+    <class>se.nrm.morphbank.datamodel.View</class>
+    <class>se.nrm.morphbank.datamodel.MissingImages</class>
+    <class>se.nrm.morphbank.datamodel.BaseObject</class>
+    <class>se.nrm.morphbank.datamodel.TaxonConcept</class>
+    <class>se.nrm.morphbank.datamodel.ServerInfo</class>
+    <class>se.nrm.morphbank.datamodel.TaxonBranch</class>
+    <class>se.nrm.morphbank.datamodel.BasisOfRecord</class>
+    <class>se.nrm.morphbank.datamodel.ImagingPreparationTechnique</class>
+    <class>se.nrm.morphbank.datamodel.MatrixCell</class>
+    <class>se.nrm.morphbank.datamodel.CollectionObjects</class>
+    <class>se.nrm.morphbank.datamodel.Image</class>
+    <class>se.nrm.morphbank.datamodel.UserProperty</class>
+    <class>se.nrm.morphbank.datamodel.ITISCounter</class>
+    <class>se.nrm.morphbank.datamodel.UserGroup</class>
+    <class>se.nrm.morphbank.datamodel.Form</class>
+    <class>se.nrm.morphbank.datamodel.RecentlyModified</class>
+    <class>se.nrm.morphbank.datamodel.TypeStatus</class>
+    <class>se.nrm.morphbank.datamodel.Spam</class>
+    <class>se.nrm.morphbank.datamodel.Tree</class>
+    <class>se.nrm.morphbank.datamodel.Taxon</class>
+    <class>se.nrm.morphbank.datamodel.User</class>
+    <class>se.nrm.morphbank.datamodel.IptImage</class>
+    <class>se.nrm.morphbank.datamodel.TaxonUnitTypes</class>
+    <class>se.nrm.morphbank.datamodel.MissingLinks</class>
+    <class>se.nrm.morphbank.datamodel.Matrix</class>
+    <class>se.nrm.morphbank.datamodel.AnnotationType</class>
+    <class>se.nrm.morphbank.datamodel.Collection</class>
+    <class>se.nrm.morphbank.datamodel.IptSpecimen</class>
+    <class>se.nrm.morphbank.datamodel.Taxa</class>
+    <class>se.nrm.morphbank.datamodel.TaxonomicUnits</class>
+    <class>se.nrm.morphbank.datamodel.ContinentOcean</class>
+    <class>se.nrm.morphbank.datamodel.Keywords</class>
+    <class>se.nrm.morphbank.datamodel.ImagingTechnique</class>
+    <class>se.nrm.morphbank.datamodel.MirrorInfo</class>
+    <class>se.nrm.morphbank.datamodel.Annotation</class>
+    <class>se.nrm.morphbank.datamodel.Locality</class>
+    <class>se.nrm.morphbank.datamodel.DevelopmentalStage</class>
+    <class>se.nrm.morphbank.datamodel.Specimen</class>
+    <class>se.nrm.morphbank.datamodel.TaxonAuthors</class>
+    <class>se.nrm.morphbank.datamodel.TaxonBranchNode</class>
+    <class>se.nrm.morphbank.datamodel.Sex</class>
+    <class>se.nrm.morphbank.datamodel.ViewAngle</class>
+    <class>se.nrm.morphbank.datamodel.Groups</class>
+    <class>se.nrm.morphbank.datamodel.UserGroupKey</class>
+    <class>se.nrm.morphbank.datamodel.SpecimenPart</class>
+    <class>se.nrm.morphbank.datamodel.DeterminationAnnotation</class>
+    <class>se.nrm.morphbank.datamodel.Otu</class>
+    <class>se.nrm.morphbank.datamodel.KeywordsTemp</class>
+    <class>se.nrm.morphbank.datamodel.ExternalLinkType</class>
+    <class>se.nrm.morphbank.datamodel.CharacterState</class>
+    <class>se.nrm.morphbank.datamodel.Kingdoms</class>
+    <class>se.nrm.morphbank.datamodel.MbCharacter</class>
+    <properties>
+      <property name="hibernate.globally_quoted_identifiers" value="true" />
+      <property name="eclipselink.canonicalmodel.subpackage" value="one"/> 
+      <!--<property name="eclipselink.logging.level" value="OFF"/>-->
+      <!--      <property name="eclipselink.logging.level.sql" value="FINE"/>
+      <property name="eclipselink.logging.parameters" value="true"/>-->
+      <property name="eclipselink.persistence-context.close-on-commit" value="true"/>
+      <property name="eclipselink.persistence-context.flush-mode" value="commit"/>
+      <property name="eclipselink.persistence-context.persist-on-commit" value="true"/>
+      <property name="eclipselink.weaving" value="true"/>
+    </properties>
+<!--    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:13306/MB32?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="root"/>
+    </properties>-->
+  </persistence-unit>
+</persistence>

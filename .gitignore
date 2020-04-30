@@ -1,0 +1,12 @@
+/morphbank-datamodel/target/
+
+.DS_Store
+
+env/.*
+data/*
+
+
+#certs
+certs/*.crt
+certs/*.key
+/morphbank-datamodel/target/

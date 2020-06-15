@@ -10,3 +10,12 @@ data/*
 certs/*.crt
 certs/*.key
 /morphbank-datamodel/target/
+/morphbank-images-logic/target/
+/morphbank-image-api/target/
+/morphbank-image-api/nb-configuration.xml
+/morphbank-images-logic/*
+
+project-initdata.yml
+
+notes
+

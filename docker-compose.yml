@@ -2,15 +2,13 @@ version: "3.7"
 
 services:
 
-  db:
-    image: mysql:5.7.22
-    container_name: mysql
-    restart: always
-    env_file: ./env/.mysql
+  ui:
+    image: dina/media-service:v0.1
     ports:
-      - 13306:3306
+      - 8080:8080
     volumes:
-      - mysql_data:/var/lib/mysql
+      - ./project-initdata.yml:/usr/src/myapp/project-initdata.yml
+      - /bildbank:/bildbank
     networks:
       - default
 
@@ -19,9 +17,8 @@ services:
 networks:
   default:
     external:
-      name: proxy_default
+      name: dwproxy_default
 
 
-
-volumes:
-  mysql_data:
+# volumes:
+#   mysql_data:

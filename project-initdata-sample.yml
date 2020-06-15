@@ -1,0 +1,8 @@
+## YAML Template.
+---
+swarm:
+  imagesPath:
+    base: bildbank
+  support:
+    mail: team@nrm.se
+    phone: 11111111

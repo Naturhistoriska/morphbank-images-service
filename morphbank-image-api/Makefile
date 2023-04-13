@@ -3,9 +3,10 @@
 all: build
 
 build:
-	docker build -t dina/morph-service:v0.1 .
+	docker build -t dina/morph-service:v0.2.1 .
 
 
 # docker login
-# release:
-# 	docker push dina/naturarv:v0.3
+release:
+	docker push dina/morph-service:v0.2.1
+

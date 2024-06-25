@@ -5,7 +5,7 @@
 
   <groupId>se.nrm</groupId>
   <artifactId>morphbank-images-service</artifactId>
-  <version>0.2</version>
+  <version>0.2.5</version>
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
 

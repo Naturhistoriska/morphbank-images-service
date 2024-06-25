@@ -19,6 +19,10 @@ public class InitialProperties implements Serializable {
     private String imagesPath;
     private String fboImagePath;
     private String kboImagePath;
+    private String palImagePath;
+    private String zooEtImagePath;
+    private String zooFishImagePagh;
+    
 
     public InitialProperties() {
     }
@@ -26,10 +30,16 @@ public class InitialProperties implements Serializable {
     @Inject
     public InitialProperties(@ConfigurationValue("swarm.imagesPath.base") String imagesPath,
             @ConfigurationValue("swarm.imagesPath.kbo") String kboImagesPath,
-            @ConfigurationValue("swarm.imagesPath.fbo") String fboImagesPath) {
+            @ConfigurationValue("swarm.imagesPath.fbo") String fboImagesPath,
+            @ConfigurationValue("swarm.imagesPath.pal") String palImagePath,
+            @ConfigurationValue("swarm.imagesPath.zoo.et") String zooEtImagePath,
+            @ConfigurationValue("swarm.imagesPath.zoo.fish") String zooFishImagePagh) {
         this.imagesPath = imagesPath;
         this.kboImagePath = kboImagesPath;
         this.fboImagePath = fboImagesPath;
+        this.palImagePath = palImagePath;
+        this.zooEtImagePath = zooEtImagePath;
+        this.zooFishImagePagh = zooFishImagePagh;
     }
 
     public String getImagesPath() {
@@ -51,5 +61,27 @@ public class InitialProperties implements Serializable {
             throw new RuntimeException(CONFIG_INITIALLISING_ERROR);
         }
         return fboImagePath;
+    }
+    
+    public String getPalImagesPath() {
+        if (palImagePath == null) {
+            throw new RuntimeException(CONFIG_INITIALLISING_ERROR);
+        }
+        return palImagePath;
+    }
+    
+    public String getZooEtImagesPath() {
+        if (zooEtImagePath == null) {
+            throw new RuntimeException(CONFIG_INITIALLISING_ERROR);
+        }
+        return zooEtImagePath;
+    }
+    
+    public String getZooFishImagesPath() {
+        log.info("zooFishImagePath : {}", zooFishImagePagh);
+        if (zooFishImagePagh == null) {
+            throw new RuntimeException(CONFIG_INITIALLISING_ERROR);
+        }
+        return zooFishImagePagh;
     }
 }

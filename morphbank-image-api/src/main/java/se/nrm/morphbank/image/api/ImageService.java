@@ -42,7 +42,8 @@ public class ImageService {
     private final String etDataset = "et";
     private final String evDataset = "ev";
     private final String fishDataset = "fish";
-
+    private final String herpsDataset = "herps"; 
+    
     @Inject
     private ImageHandler handler;
 
@@ -92,6 +93,11 @@ public class ImageService {
                             .build();
                 case fishDataset:
                     log.info("fish"); 
+                    return Response.ok(handler.getZooFishImage(id))
+                            .header(inline, imageJpg) 
+                            .build();
+                case herpsDataset:
+                    log.info("herps"); 
                     return Response.ok(handler.getZooFishImage(id))
                             .header(inline, imageJpg) 
                             .build();

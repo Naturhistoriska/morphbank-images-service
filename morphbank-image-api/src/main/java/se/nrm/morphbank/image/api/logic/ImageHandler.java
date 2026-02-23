@@ -101,4 +101,13 @@ public class ImageHandler implements Serializable {
         }
         return null;
     }
+    
+    public File getZooHerpsImage(String filePath) {
+        filePath = zooFishPath + filePath; 
+        imageFile = new File(filePath);  
+        if(imageFile.exists()) {
+            return imageFile;
+        }
+        return null;
+    }
 }
